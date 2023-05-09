@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.login.SignInFragment">
+    <LinearLayout
+        android:id="@+id/suLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/acTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/appColor"
+            android:text="Do you have a account?"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/toSignUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            android:textColor="#3F04E4"
+            android:paddingLeft="20dp"
+            android:text="Sign up"/>
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toTopOf="@id/suLayout"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="SIGN IN"/>
+    <TextView
+        android:id="@+id/forgotPasswordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:text="Forgot password?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/signInButton"
+        app:layout_constraintRight_toRightOf="@id/signInButton"
+        android:gravity="right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="50dp"
+        />
+    <EditText
+        android:id="@+id/loginPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Password"
+        android:fontFamily="@font/aldrich"
+
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/forgotPasswordTextView"/>
+    <EditText
+        android:id="@+id/loginEmailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Username"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:fontFamily="@font/aldrich"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/loginPasswordEditText"/>
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="Welcome"
+        android:textColor="@color/appColor"
+        android:fontFamily="@font/aldrich"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@id/loginEmailEditText"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
