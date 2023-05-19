@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment"
+        android:title="Analysis"
+        android:icon="@drawable/run" />
+
+    <item android:id="@+id/missionFragment"
+        android:title="Mission"
+        android:icon="@drawable/mission" />
+
+    <item android:id="@+id/placeholder"
+        android:title="" />
+
+    <item android:id="@+id/sortingFragment"
+        android:title="Sorting"
+        android:icon="@drawable/sorting" />
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/profile" />
+</menu>

@@ -32,6 +32,7 @@
 
 
         <ImageView
+            android:id="@+id/backArrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/left"
@@ -39,7 +40,8 @@
             android:layout_marginEnd="10dp"
             app:tint="@color/appColor" />
 
-        <com.google.android.material.imageview.ShapeableImageView
+    <!--
+             <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profileImageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -50,7 +52,18 @@
             app:shapeAppearanceOverlay="@style/circleImageView"
             app:strokeColor="@color/appColor"
             app:strokeWidth="7dp" />
+-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animalImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_rawRes="@raw/parrot"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+ />
         <ImageView
+            android:id="@+id/nextArrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/right"
@@ -72,17 +85,18 @@
         >
 
         <EditText
+            android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:maxLines="1"
             android:hint="Username"
             android:fontFamily="@font/aldrich"
-
             android:layout_margin="10dp"
 
             />
         <EditText
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -92,6 +106,7 @@
             android:layout_margin="10dp"
             />
         <EditText
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -102,15 +117,17 @@
 
             />
         <EditText
+            android:id="@+id/passwordOtherEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:maxLines="1"
-            android:hint="Username"
+            android:hint="Password"
             android:fontFamily="@font/aldrich"
             android:layout_margin="10dp"
             />
         <Button
+            android:id="@+id/nextStepButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -132,28 +149,21 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="30dp"
             >
-            <com.google.android.material.button.MaterialButton
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/gmailButton"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:maxLines="1"
-                app:icon="@drawable/face_icon"
-                android:backgroundTint="#1771E6"
-                android:textColorHint="@color/white"
-                android:fontFamily="@font/aldrich"
                 android:layout_marginEnd="10dp"
-                />
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:maxLines="1"
-                app:icon="@drawable/gmail"
                 android:backgroundTint="#FBBC04"
-                android:textColorHint="@color/white"
                 android:fontFamily="@font/aldrich"
-                android:layout_marginEnd="10dp"
-                />
+                android:hint="g"
+                android:contentDescription="gmail"
+                android:maxLines="1"
+                android:textColorHint="@color/white"
+                android:textSize="20sp"
+                app:icon="@drawable/gmail" />
         </LinearLayout>
 
 

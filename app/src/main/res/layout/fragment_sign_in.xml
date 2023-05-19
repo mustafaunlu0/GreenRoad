@@ -60,7 +60,7 @@
         android:layout_marginRight="50dp"
         />
     <EditText
-        android:id="@+id/loginPasswordEditText"
+        android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="40dp"
@@ -68,17 +68,16 @@
         android:layout_marginBottom="20dp"
         android:hint="Password"
         android:fontFamily="@font/aldrich"
-
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:textColor="@color/black"
+        android:textColor="#E43F0B"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/forgotPasswordTextView"/>
     <EditText
-        android:id="@+id/loginEmailEditText"
+        android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
@@ -93,7 +92,7 @@
         android:paddingEnd="15dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/loginPasswordEditText"/>
+        app:layout_constraintBottom_toTopOf="@id/passwordEditText"/>
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="match_parent"
@@ -106,8 +105,7 @@
         android:textSize="50sp"
         android:textStyle="bold"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@id/loginEmailEditText"/>
-
+        app:layout_constraintBottom_toTopOf="@id/usernameEditText"/>
 
 
 

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "716579750984",
+    "project_id": "greenroad-f8b7e",
+    "storage_bucket": "greenroad-f8b7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716579750984:android:a3a50601269233120e847d",
+        "android_client_info": {
+          "package_name": "com.example.greenroad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716579750984-3lsllfk785aep83tds40q3rl3k9ffq9o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.greenroad",
+            "certificate_hash": "579db0427fdadf63779c1e80b8994ef1d5913fd7"
+          }
+        },
+        {
+          "client_id": "716579750984-1498kfi1p9e0g66ad9s91031bgeabaso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBwXRL_L1VZ8_SR4nw8qVIo5Uce03GpRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716579750984-1498kfi1p9e0g66ad9s91031bgeabaso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

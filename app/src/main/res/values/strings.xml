@@ -4,4 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign_up">Sign Up</string>
+
+    <string name="facebook_app_id">757345095890454</string>
+    <string name="facebook_client_token">ea61b4b93eacc2db1aa57fa1ae203d98</string>
 </resources>
