@@ -1,6 +1,10 @@
 package com.example.greenroad.view
 
+import android.content.Context
 import android.content.res.ColorStateList
+import android.hardware.Sensor
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -30,6 +34,8 @@ class MainActivity : AppCompatActivity() {
     var profileFragment = ProfileFragment()
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding=ActivityMainBinding.inflate(layoutInflater)
@@ -38,11 +44,12 @@ class MainActivity : AppCompatActivity() {
         _binding.bottomNavigationView.background=null
         _binding.bottomNavigationView.menu.getItem(2).isEnabled=false
 
-        //Burada kaldık
+        //Navigation with Menu
         val navController = findNavController(R.id.fragmentContainerView)
-
-
         NavigationUI.setupWithNavController(_binding.bottomNavigationView, navController = navController)
+
+
+
 
 
     }

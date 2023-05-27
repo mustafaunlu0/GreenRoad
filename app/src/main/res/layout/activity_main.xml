@@ -42,7 +42,7 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/mapping"
             app:layout_anchor="@id/bottomAppBar"
-            android:backgroundTint="#E43F0B"
+            android:backgroundTint="@color/mainColor"
             android:foregroundTint="@color/white"
             app:rippleColor="@color/white"
             />
