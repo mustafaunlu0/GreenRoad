@@ -33,6 +33,10 @@
         android:name="com.example.greenroad.view.home.SortingFragment"
         android:label="fragment_sorting"
         tools:layout="@layout/fragment_sorting" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.greenroad.view.home.MapFragment"
+        android:label="MapsFragment" />
 
 
 </navigation>

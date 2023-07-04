@@ -7,4 +7,6 @@
 
     <string name="facebook_app_id">757345095890454</string>
     <string name="facebook_client_token">ea61b4b93eacc2db1aa57fa1ae203d98</string>
+    <string name="map_id">ee86fa5cc1c34c1a</string>
+
 </resources>

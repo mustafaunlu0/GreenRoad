@@ -134,7 +134,7 @@ class HomeFragment : Fragment(), SensorEventListener {
     }
 
     override fun onSensorChanged(event: SensorEvent?) {
-        var tvStepsTaken = _binding!!.stepCounter
+        val tvStepsTaken = _binding!!.stepCounter
         if(running){
             Toast.makeText(requireContext(),"Running", Toast.LENGTH_LONG).show()
             totalSteps = event!!.values[0]
