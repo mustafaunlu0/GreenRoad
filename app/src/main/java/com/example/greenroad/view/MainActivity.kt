@@ -20,15 +20,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(_binding.root)
 
         _binding.bottomNavigationView.background=null
-        _binding.bottomNavigationView.menu.getItem(2).isEnabled=false
 
         //Navigation with Menu
         val navController = findNavController(R.id.fragmentContainerView)
         NavigationUI.setupWithNavController(_binding.bottomNavigationView, navController = navController)
 
-        _binding.fab.setOnClickListener {
-            navController.navigate(R.id.mapsFragment)
-        }
+
 
 
 

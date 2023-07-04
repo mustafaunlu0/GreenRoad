@@ -9,8 +9,10 @@
         android:title="Mission"
         android:icon="@drawable/mission" />
 
-    <item android:id="@+id/placeholder"
-        android:title="" />
+    <item android:id="@+id/mapsFragment"
+        android:title="Map"
+        android:icon="@drawable/mapping"/>
+
 
     <item android:id="@+id/sortingFragment"
         android:title="Sorting"

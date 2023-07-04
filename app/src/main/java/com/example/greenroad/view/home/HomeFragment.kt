@@ -92,10 +92,10 @@ class HomeFragment : Fragment(), SensorEventListener {
         val stepSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
 
         if(stepSensor == null){
-            Toast.makeText(requireContext(),"No sensor detected on this device", Toast.LENGTH_LONG).show()
+            //Toast.makeText(requireContext(),"No sensor detected on this device", Toast.LENGTH_LONG).show()
         }else{
             sensorManager?.registerListener(this,stepSensor,SensorManager.SENSOR_DELAY_UI)
-            Toast.makeText(requireContext(),"Sensor detected on this device", Toast.LENGTH_LONG).show()
+            //Toast.makeText(requireContext(),"Sensor detected on this device", Toast.LENGTH_LONG).show()
         }
 
 
