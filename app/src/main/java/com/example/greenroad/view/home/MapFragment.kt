@@ -38,10 +38,10 @@ class MapFragment : Fragment() {
         val locationArrayList = arrayListOf<LatLng>()
 
         val florya = LatLng(40.9769097, 28.7855918)
-        val bakirkoy= LatLng(40.9740697,28.8759067)
-        val kucukcekmece = LatLng(40.9903316,28.7705272)
-        val menekse= LatLng(40.9827646,28.7588172)
-        val buyukcekmece = LatLng(41.016676,28.5848186)
+        val bakirkoy= LatLng(40.975238, 28.880226)
+        val kucukcekmece = LatLng(41.000138, 28.764883)
+        val menekse= LatLng(40.981473, 28.762336)
+        val buyukcekmece = LatLng(41.016865, 28.588332)
         val balat = LatLng(41.030339,28.9526729)
 
         locationArrayList.add(florya)
