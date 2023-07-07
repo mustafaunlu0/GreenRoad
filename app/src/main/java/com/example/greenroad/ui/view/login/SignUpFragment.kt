@@ -1,4 +1,4 @@
-package com.example.greenroad.view.login
+package com.example.greenroad.ui.view.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.greenroad.databinding.FragmentSignUpBinding
 import com.example.greenroad.util.Constants.animals
-import com.example.greenroad.view.MainActivity
+import com.example.greenroad.ui.view.MainActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -22,9 +22,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import dagger.hilt.android.AndroidEntryPoint
 import javax.annotation.Nullable
 
-
+@AndroidEntryPoint
 class SignUpFragment : Fragment() {
 
 

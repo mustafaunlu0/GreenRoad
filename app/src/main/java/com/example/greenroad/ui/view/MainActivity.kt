@@ -1,4 +1,4 @@
-package com.example.greenroad.view
+package com.example.greenroad.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,13 +6,13 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.greenroad.R
 import com.example.greenroad.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit  var _binding : ActivityMainBinding
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.greenroad.view.home.HomeFragment"
+        android:name="com.example.greenroad.ui.view.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.greenroad.view.home.ProfileFragment"
+        android:name="com.example.greenroad.ui.view.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -25,17 +25,17 @@
     </fragment>
     <fragment
         android:id="@+id/missionFragment"
-        android:name="com.example.greenroad.view.home.MissionFragment"
+        android:name="com.example.greenroad.ui.view.mission.MissionFragment"
         android:label="fragment_mission"
         tools:layout="@layout/fragment_mission" />
     <fragment
         android:id="@+id/sortingFragment"
-        android:name="com.example.greenroad.view.home.SortingFragment"
+        android:name="com.example.greenroad.ui.view.sorting.SortingFragment"
         android:label="fragment_sorting"
         tools:layout="@layout/fragment_sorting" />
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="com.example.greenroad.view.home.MapFragment"
+        android:name="com.example.greenroad.ui.view.map.MapFragment"
         android:label="MapsFragment" />
 
 

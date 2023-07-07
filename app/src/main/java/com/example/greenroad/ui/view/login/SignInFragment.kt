@@ -1,4 +1,4 @@
-package com.example.greenroad.view.login
+package com.example.greenroad.ui.view.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,11 +12,13 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.greenroad.R
 import com.example.greenroad.databinding.FragmentSignInBinding
-import com.example.greenroad.view.MainActivity
+import com.example.greenroad.ui.view.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignInFragment : Fragment() {
 
     private var _binding: FragmentSignInBinding? = null

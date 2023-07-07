@@ -1,4 +1,4 @@
-package com.example.greenroad.view.home
+package com.example.greenroad.ui.view.map
 
 import androidx.fragment.app.Fragment
 
@@ -18,7 +18,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MapFragment : Fragment() {
 
     private val callback = OnMapReadyCallback { googleMap ->

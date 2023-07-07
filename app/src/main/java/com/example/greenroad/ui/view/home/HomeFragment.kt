@@ -1,4 +1,4 @@
-package com.example.greenroad.view.home
+package com.example.greenroad.ui.view.home
 
 import android.content.Context
 import android.hardware.Sensor
@@ -6,20 +6,17 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.datastore.core.DataStore
 import com.example.greenroad.databinding.FragmentHomeBinding
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
-import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
-import com.example.greenroad.view.home.HomeFragment.PreferencesKey.STEP_COUNT
+import com.example.greenroad.util.Constants.STEP_COUNT
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -35,6 +32,7 @@ class HomeFragment : Fragment(), SensorEventListener {
 
 
     //Step Sensor
+
     private  var sensorManager : SensorManager? = null
 
     private var running = false
@@ -43,12 +41,17 @@ class HomeFragment : Fragment(), SensorEventListener {
 
     private var previousTotalSteps = 0f
 
+
+
     //DataStore
 
     //Key
+    /*
     private object PreferencesKey{
         val STEP_COUNT = intPreferencesKey("stepCount")
     }
+
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +73,7 @@ class HomeFragment : Fragment(), SensorEventListener {
         super.onViewCreated(view, savedInstanceState)
         //Step Counter with Sensor
         laodData()
-        resetSteps()
+        //resetSteps()
 
 
 
@@ -105,9 +108,9 @@ class HomeFragment : Fragment(), SensorEventListener {
 
         _binding!!.stepCounter.setOnLongClickListener{
 
-            previousTotalSteps = totalSteps
+            //previousTotalSteps = totalSteps
             _binding!!.stepCounter.text=0.toString()
-            saveData()
+            //saveData()
             true
         }
     }
