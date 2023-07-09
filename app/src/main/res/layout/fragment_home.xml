@@ -132,6 +132,7 @@
 
             >
             <ImageView
+                android:id="@+id/timeImageView"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/timer2"

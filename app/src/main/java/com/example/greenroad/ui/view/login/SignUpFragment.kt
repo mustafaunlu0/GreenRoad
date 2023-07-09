@@ -25,7 +25,6 @@ import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 import javax.annotation.Nullable
 
-@AndroidEntryPoint
 class SignUpFragment : Fragment() {
 
 

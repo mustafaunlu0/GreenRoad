@@ -20,7 +20,6 @@ import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MapFragment : Fragment() {
 
     private val callback = OnMapReadyCallback { googleMap ->

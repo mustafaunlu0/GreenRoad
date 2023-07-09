@@ -1,84 +1,94 @@
 package com.example.greenroad.ui.view.home
 
-import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.core.intPreferencesKey
-import androidx.datastore.preferences.preferencesDataStore
+import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
-import com.example.greenroad.databinding.FragmentHomeBinding
+import com.example.greenroad.data.repository.DatastoreRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 
-class HomeViewModel (private var sensorManagerFromActivity: SensorManager?) : ViewModel(),SensorEventListener {
-    val Context.dataStore: DataStore<Preferences> by preferencesDataStore("user_prefs")
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val dataStoreRepository: DatastoreRepository,
+    private val sensorManager: SensorManager
+) : ViewModel(), SensorEventListener {
 
+    private val _stepCount = MutableLiveData<Int>()
+    private val _currentSteps = MutableLiveData<Int>()
 
+    val currentSteps : LiveData<Int>
+        get() = _currentSteps
+    val stepCount: LiveData<Int>
+        get() = _stepCount
 
-    //Step Sensor
-    private  var sensorManager : SensorManager? = null
-
-    private var running = false
-
+    var running = true
+        private set
     private var totalSteps = 0f
+     var previousTotalSteps = 0f
+         private set
 
-    private var previousTotalSteps = 0f
-
-    private object PreferencesKey{
-        val STEP_COUNT = intPreferencesKey("stepCount")
+    fun checkSensorDetection(){
+        val stepSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
+        if (stepSensor == null) {
+            //println("No sensor detected on this device")
+        } else {
+            sensorManager.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
+            //println("Sensor detected on this device")
+        }
     }
 
-    init {
-        if(sensorManagerFromActivity != null)
-            sensorManager=sensorManagerFromActivity
-        else
-            println("sensorManagerFromActivity")
+    fun writeCount(stepCount: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            dataStoreRepository.writeStepCount(stepCount)
+        }
+
 
     }
 
+    fun readCount() {
+        viewModelScope.launch {
+            _stepCount.value = dataStoreRepository.readStepCount()
+            previousTotalSteps= dataStoreRepository.readStepCount()?.toFloat() ?: 0f
+        }
+    }
+
+    fun findCurrentSteps(totalSteps: Float, previousSteps: Float): Int {
+        return totalSteps.toInt() - previousSteps.toInt()
+    }
+
+    fun resetSteps(){
+        previousTotalSteps=totalSteps
+        writeCount(previousTotalSteps.toInt())
+    }
 
     override fun onSensorChanged(p0: SensorEvent?) {
-        TODO("Not yet implemented")
+        if (running) {
+            println("Tetiklendi")
+            totalSteps = p0!!.values[0]
+            _currentSteps.value = findCurrentSteps(totalSteps, previousTotalSteps)
+
+        }
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-        TODO("Not yet implemented")
+
     }
 
-    private fun saveData() {
-        viewModelScope.launch {
-            //writeStepCount(previousTotalSteps.toInt())
-        }
-    }
-
-    private fun laodData() {
-        viewModelScope.launch {
-            /*
-            val deger = readStepCount()
-
-            if(deger != null){
-                previousTotalSteps = deger!!.toFloat()
-            }else{
-                previousTotalSteps = 20f
-
-            }
-
-             */
-
-        }
-    }
-
-    private fun resetSteps() {
-            previousTotalSteps = totalSteps
-            saveData()
+    override fun onCleared() {
+        super.onCleared()
+        running = false
 
 
     }
+
 
 }

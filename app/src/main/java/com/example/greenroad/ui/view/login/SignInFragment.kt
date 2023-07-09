@@ -18,7 +18,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class SignInFragment : Fragment() {
 
     private var _binding: FragmentSignInBinding? = null

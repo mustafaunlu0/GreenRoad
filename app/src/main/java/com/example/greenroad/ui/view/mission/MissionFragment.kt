@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.greenroad.R
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class MissionFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
