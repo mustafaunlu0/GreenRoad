@@ -11,6 +11,13 @@ import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.preferencesDataStoreFile
 import com.example.greenroad.data.repository.DatastoreRepository
 import com.example.greenroad.util.Constants
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -44,5 +51,18 @@ object AppModule {
     @Provides
     @Singleton
     fun provideSensorManager(@ApplicationContext context: Context) : SensorManager = context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
+    @Provides
+    @Singleton
+    fun provideFireStoreInstance() : FirebaseFirestore = Firebase.firestore
+
+    @Provides
+    @Singleton
+    fun provideAuth() : FirebaseAuth = Firebase.auth
+
+
+
+
+
 
 }
