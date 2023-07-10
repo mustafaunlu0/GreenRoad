@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:background="#FF5722"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+    <TextView
+        android:id="@+id/locationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Name"
+        />
+
+    <TextView
+        android:id="@+id/locationLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Latitude"
+        />
+    <TextView
+        android:id="@+id/locationLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Longitude"
+        />
+    <TextView
+        android:id="@+id/locationPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Point"
+        />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
